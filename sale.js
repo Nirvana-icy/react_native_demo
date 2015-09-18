@@ -101,18 +101,18 @@ var GridList = React.createClass({
           style={[styles.centering, styles.gray, {height: 500}]} />
       );
     };
-
+    console.log('......jsSide begin to setup View via RN......');
+    console.log('......jsSide set stickyHeaderIndices={[1]}......');
     return (
       <ListView contentContainerStyle={[style, props.style,{marginTop: -20}]}
         dataSource={state.dataSource}
         showsVerticalScrollIndicator={false}
+        stickyHeaderIndices={[1]}               //It doesn't work
         renderHeader={this._renderHeader}
         renderRow={this._renderRow}>
       </ListView>
     );
   },
-
-
 
   _renderHeader() {
     return (

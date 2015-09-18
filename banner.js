@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react-native');
-
+var RCTBridge=require('NativeModules').DDRctBridge;
 var Dimensions = require('Dimensions');
 var {
   width,
@@ -24,7 +24,7 @@ var MockData = {
 
 var BannerView = React.createClass({
   _onpress: function(){
-    console.log("go to mogujie...");
+    RCTBridge.openUrl('mktman://merchantToBeSubmitted');
   },
   render: function(){
     var data = MockData || {};
